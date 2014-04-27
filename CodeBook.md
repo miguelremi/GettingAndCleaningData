@@ -3,6 +3,7 @@ Original data set is taken from https://d396qusza40orc.cloudfront.net/getdata%2F
 Inside ZIP file you can find a README.txt file describing this dataset.
 
 There are test data and and train data sets that will be merged in our final data. Once merged measures are grouped in groups with distinct subject and activity and all other variables are summarized by using the mean within a group.
+There are a total of 180 groups (rows) in final data corresponding to 30 subjects with 6 types of activities.
 
 # Data Set
 
@@ -10,17 +11,20 @@ Grouping data:
 * Subject: an integer identifier for the person who did the activity.
 * Activity: string describing the type of activity.
 
-Mean values from Original Dataset (mean values obtained for each group) (see features_info.txt in ZIP file):
-tBodyAcc_mean_X, tBodyAcc_mean_Y, tBodyAcc_mean_Z
-tBodyAcc_std_X, tBodyAcc_std_Y, tBodyAcc_std_Z
-tGravityAcc_mean_X, tGravityAcc_mean_Y, tGravityAcc_mean_Z
-tGravityAcc_std_X, tGravityAcc_std_Y, tGravityAcc_std_Z
-tBodyAccJerk_mean_X, tBodyAccJerk_mean_Y, tBodyAccJerk_mean_Z
-tBodyAccJerk_std_X, tBodyAccJerk_std_Y, tBodyAccJerk_std_Z
-tBodyGyro_mean_X, tBodyGyro_mean_Y, tBodyGyro_mean_Z
-tBodyGyro_std_X, tBodyGyro_std_Y, tBodyGyro_std_Z
-tBodyGyroJerk_mean_X, tBodyGyroJerk_mean_Y, tBodyGyroJerk_mean_Z
-tBodyGyroJerk_std_X, tBodyGyroJerk_std_Y, tBodyGyroJerk_std_Z
+Only variables containing "-mean" or "-std" are included in final data. Parenthesis in column names are removed and "-" is replaced with underscore "_" character.
+
+Mean values from Original Dataset (mean values obtained for each group for every variable) (see features_info.txt in ZIP file for description of ungrouped values. Mean is calculated for each group, even if it is not described what is the interpretation of that mean):
+
+tBodyAcc_mean_XYZ
+tBodyAcc_std_XYZ
+tGravityAcc_mean_XYZ
+tGravityAcc_std_XYZ
+tBodyAccJerk_mean_XYZ
+tBodyAccJerk_std_XYZ
+tBodyGyro_mean_XYZ
+tBodyGyro_std_XYZ
+tBodyGyroJerk_mean_XYZ
+tBodyGyroJerk_std_XYZ
 tBodyAccMag_mean
 tBodyAccMag_std
 tGravityAccMag_mean
@@ -31,15 +35,15 @@ tBodyGyroMag_mean
 tBodyGyroMag_std
 tBodyGyroJerkMag_mean
 tBodyGyroJerkMag_std
-fBodyAcc_mean_X, fBodyAcc_mean_Y, fBodyAcc_mean_Z
-fBodyAcc_std_X, fBodyAcc_std_Y, fBodyAcc_std_Z
-fBodyAcc_meanFreq_X, fBodyAcc_meanFreq_Y, fBodyAcc_meanFreq_Z
-fBodyAccJerk_mean_X, fBodyAccJerk_mean_Y, fBodyAccJerk_mean_Z
-fBodyAccJerk_std_X, fBodyAccJerk_std_Y, fBodyAccJerk_std_Z
-fBodyAccJerk_meanFreq_X, fBodyAccJerk_meanFreq_Y, fBodyAccJerk_meanFreq_Z
-fBodyGyro_mean_X, fBodyGyro_mean_Y, fBodyGyro_mean_Z
-fBodyGyro_std_X, fBodyGyro_std_Y, fBodyGyro_std_Z
-fBodyGyro_meanFreq_X, fBodyGyro_meanFreq_Y, fBodyGyro_meanFreq_Z
+fBodyAcc_mean_XYZ
+fBodyAcc_std_XYZ
+fBodyAcc_meanFreq_XYZ
+fBodyAccJerk_mean_XYZ
+fBodyAccJerk_std_XYZ
+fBodyAccJerk_meanFreq_XYZ
+fBodyGyro_mean_XYZ
+fBodyGyro_std_XYZ
+fBodyGyro_meanFreq_XYZ
 fBodyAccMag_mean
 fBodyAccMag_std
 fBodyAccMag_meanFreq
